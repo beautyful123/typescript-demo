@@ -93,4 +93,19 @@ ts笔记：
         "strictNullChecks": true, //严格的检查空值
       }
       
+class笔记： 
+  子类如果写入constructor构造函数，则必须使用super()方法调用，以实现继承关系。 否则报错
+
+  如果父类constructor有入参，则继承后的子类也应有且在super()调用。否则为父类为undefined
+
+  关键字：
+    constructor()  构造函数
+    extends  继承
+    static  静态属性或方法
+    abstract：
+      抽象类: (抽象类生来就是为其子类创建对象的，生来就是当爸爸的)
+        作用：抽象类不可使用new关键字创建对象
+          例如：abstract class Animal() {} new Animal()报错
+      抽象方法： (抽象方法定义在抽象类内，子类必须重写该方法)
+
     
