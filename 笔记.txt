@@ -1,0 +1,96 @@
+ts笔记：
+  1. 类型注解：
+    函数：
+      参数：
+        function fn(name: string){}
+      返回值：
+        function fn():number {return 123}
+    变量：var a:number = 123
+      注意：let a = false; ts默认 let a:boolean = false。
+      所以：一般不用声明类型，ts会自动根据赋值类型带出。函数中入参用处比较大
+    类型列表：
+      string,
+      number,
+      boolean,
+      any, //任意值，可赋值给别的变量，危险
+      unknown: //安全的any,不可赋值给别的变量。
+        断言：unknown需要赋值的话使用
+          let a:unknown;
+          let b:string;
+          b = a as string // 断言a为string类型
+          b = <string>a // 另一种写法
+      void, //空值多用于函数 function fn():void {} 不返回内容，return; return undefined; return null;
+      never,//空值 永远不会返回结果的，比如throw error运行后程序结束，return undefined也不会有
+      object, //不常用，我们一般是想控制对象的属性类型数量。
+        let a: object //不常用
+        let a: {name: string,age?: number} // a为对象，且age可选为number
+        let a: {name: string, [prop: string]: number | string} //[prop: string]包括了之前的name属性，因此 number | string
+      function, //类似object
+        let fn:function
+        let fn: (a: string,b: number) => number //两个入参，第一个string,第二个number，返回值number
+        ？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？
+        问题：function ()参数只规定第一个类型其余不规定怎样配置？？？
+        ？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？
+      array:
+        let arr = number[]
+        let arr = Array<number>
+      tuple: //固定长度
+        let arr = [string,string]         arr = ["ylw", "qyl"]
+      enum: //枚举
+        enum gg{
+          nan: 1,
+          nv: 0
+        }
+        let obj: {name:string, sex:gg}
+        obj = {name: 'qyl', sex: gg.nan}
+
+  2. 接口：
+    interface Params {
+      firstName: string,
+      lastName: string
+    }
+    function fn(params: Params) {}
+    let a = {firstName: '12', lastName: '1232}
+
+  3. 配置
+    文件名： tsconfig.json
+      格式： {
+        include: [],
+        exclude: [],
+        compilerOptions: {
+          xx：
+          xx: 
+        }
+      }
+    属性：
+      include: [] //要编译的文件列表
+        例: "./src/**/*"
+          **: 指任意文件夹
+          *： 指任意文件
+          译： 当前文件夹下的src文件夹下的任意文件夹下的任意文件
+      exclude: [] //不需要编译的文件列表
+        同include
+      extends: "" // 继承
+      files: [] //要编译的文件，需要一个个输入
+      // 编译器选项
+      compilerOptions: {
+        target: 'es2015' // ts被编译成的es版本
+        module: 'es2015' // 使用模块化的版本 
+          例： 'comminjs'
+        outdir: "./dist" // 编译导出的文件目录
+        outFile: "./dist/app.js" // 将所有编译后的js文件整合成一个文件
+          译： 讲所有ts编译并存在当前文件下的dist文件下的app.js文件内
+        allowJs: true // 编译所有js
+        checkJs: true // 检查js是否符合ts规则
+        removeComments: true // 移除所有注释
+        noEmit: false
+        noEmitOnError: true // 当有错误时，不编译ts不生成js文件
+        
+        "strict": true, //打开所有严格模式
+        "alwaysStrict": true, // 编译后的文件是否为严格模式
+        "noImplicitAny": true, // 不允许隐式的any类型
+        "noImplicitThis": true, // 不允许不明确的this
+        "strictNullChecks": true, //严格的检查空值
+      }
+      
+    

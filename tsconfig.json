@@ -1,0 +1,36 @@
+{
+  // 编译器选项
+  "compilerOptions": {
+    "target": "es2015", // 目标 指定ts被编译为es的版本
+    "module": "es2015",
+    // 代码编译到一个文件夹
+    "outDir": "./built",
+    // 代码合成一个文件
+    // "outFile": "./dist/app.js",
+    "allowJs": true, // 编译js
+    "checkJs": true, //检查js符合ts不
+    "removeComments": true, // 不要注释
+    // "noEmit": false,
+    "noEmitOnError": true, //有错误时不编译 ts默认有错误还会编译
+
+    "strict": true, //打开所有严格模式
+    "alwaysStrict": true, // 编译后的文件是否为严格模式
+    "noImplicitAny": true, // 不允许隐式的any类型
+    "noImplicitThis": true, // 不允许不明确的this
+    "strictNullChecks": true, //严格的检查空值
+  },
+  // 需要被编译的文件
+  "include": [
+    "./**/*"
+  ],
+  // 不需要被编译的文件
+  "exclude": [
+    "./TypeScript-Vue-Starter/**/*",
+    "./built/**/*",
+    "./part3/**/*"
+  ],
+  // 继承配置文件
+  // "extends": "",
+  // 要编译的文件，一个个，类似include
+  // "files": []
+}
