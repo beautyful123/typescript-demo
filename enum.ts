@@ -1,5 +1,5 @@
 enum Gender{ // 枚举
-  Male = 1,
+  Male = 11,
   Female = 0
 }
 let obje: {name: string, gender: Gender}
