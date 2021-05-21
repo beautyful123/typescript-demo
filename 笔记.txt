@@ -43,7 +43,11 @@ ts笔记：
         }
         let obj: {name:string, sex:gg}
         obj = {name: 'qyl', sex: gg.nan}
+    type: 
+      type asd = {age: number}
+      let ada:asd
 
+  
   2. 接口：
     interface Params {
       firstName: string,
@@ -93,4 +97,3 @@ ts笔记：
         "strictNullChecks": true, //严格的检查空值
       }
       
-    
