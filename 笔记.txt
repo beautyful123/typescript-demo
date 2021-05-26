@@ -97,3 +97,15 @@ ts笔记：
         "strictNullChecks": true, //严格的检查空值
       }
       
+class 类
+  static: 静态属性，方法
+    只能在类里使用不能在实例化后.访问修改
+  super(): super代表父类，子类中constructor方法必须使用super()，传值也要有
+  属性封装：
+    public: 共有属性
+    priveta: 私有属性
+      不能实例化后用.修改，定义修改方法，还可以控制
+      不能继承后访问，仅仅定义的类可访问
+    protected：受保护的属性
+      实例化后还是不能.访问修改
+      可以继承后访问
