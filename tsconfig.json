@@ -27,10 +27,10 @@
   "exclude": [
     "./TypeScript-Vue-Starter/**/*",
     "./built/**/*",
-    "./dist/**/*",
+    "./part2/**/*",
     "./part3/**/*",
-    "./img/**/*"
-  ],
+    "./snakeEating/**/*"
+  ]
   // 继承配置文件
   // "extends": "",
   // 要编译的文件，一个个，类似include
