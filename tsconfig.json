@@ -27,7 +27,9 @@
   "exclude": [
     "./TypeScript-Vue-Starter/**/*",
     "./built/**/*",
-    "./part3/**/*"
+    "./dist/**/*",
+    "./part3/**/*",
+    "./img/**/*"
   ],
   // 继承配置文件
   // "extends": "",
