@@ -10,7 +10,8 @@ module.exports = {
     filename: 'bundle.js',
     // 告诉webpack，不用箭头函数
     environment: {
-      arrowFunction: false
+      arrowFunction: false,
+      const: false
     }
   },
   // devServer: {
@@ -89,5 +90,8 @@ module.exports = {
       // title: '于立伟真帅'
       template: './src/index.html'
     }),
-  ]
+  ],
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js'],
+  },
 }
