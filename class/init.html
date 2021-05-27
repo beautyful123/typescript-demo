@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>class === extends</title>
+</head>
+<!-- 
+  extedns 继承
+
+    子类如果写入constructor构造函数，则必须使用super()方法调用，以实现继承关系。 否则报错
+
+    如果父类constructor有入参，则继承后的子类也应有且在super()调用。否则为父类为undefined
+
+    关键字：
+      constructor()  构造函数
+      extends  继承
+      static  静态属性或方法
+
+ -->
+<body>
+<script>
+  class Animal{
+    constructor(a) {
+      this.type = a
+    }
+    say() {
+      console.log("我是animal")
+    }
+    static a1 = "于立伟真帅"
+    static f1() {
+      alert("f1")
+    }
+  }
+  class Dogg extends Animal{
+    constructor(a,b) {
+      super(a)
+      this.name = b
+    }
+  }
+  var a = new Dogg("狗",'旺财')
+
+  // 抽象类
+  
+</script>  
+</body>
+</html>

@@ -18,13 +18,16 @@
  * 
  * 
 */
-class Parent{
-  name = "yuliwe"
-  age = 12
-  // constructor(a:string,b:number) {
-  //   this?.name = a
-  //   this?.age = b
-  // }
-}
-const name1 = new Parent();
-console.log(name1.name,name1.age)
+(()=>{
+
+  class Parent{
+    name = "yuliwe"
+    age = 12
+    // constructor(a:string,b:number) {
+      //   this?.name = a
+      //   this?.age = b
+      // }
+    }
+    const name1 = new Parent();
+    console.log(name1.name,name1.age)
+  })()
