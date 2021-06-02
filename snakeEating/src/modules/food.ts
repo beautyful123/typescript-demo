@@ -4,6 +4,8 @@ class Food{
 
   constructor() {
     this.element = document.getElementById("food")!;
+    // 初始化食物
+    this.change();
   }
 /**
  * 食物的定位位置

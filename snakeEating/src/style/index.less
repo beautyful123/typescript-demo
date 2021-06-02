@@ -17,8 +17,13 @@
     width: 304px;
     height: 304px;
     border: 2px solid #000;
+    overflow: hidden;
     .snake{
       div{
+        position: absolute;
+        top: -10px;
+        // transition: linear;
+        // transition-property: left,top;
         width: 10px;
         height: 10px;
         background: #000;
@@ -33,6 +38,9 @@
       height: 10px;
       background: #007;
       border: 1px solid #b7d4a8;
+      // transition: transform 1s linear;
+      animation: asas 1s linear infinite;
+      border-radius: 45%;
     }
   }
   .footer{
@@ -45,4 +53,14 @@
     font-size: 20px;
     font-weight: bold;
   }
-}  
+}
+@keyframes asas{
+  from{
+    transform: rotate3d(1,1,1,0deg);
+    background: #000;
+  }
+  to{
+    transform: rotate3d(1,1,1,360deg);
+    background:red;
+  }
+}
